@@ -1,9 +1,9 @@
 import pickle
 import numpy as np
 
-# Load ML model
-with open('knn_model.pkl','rb') as file:
-    model = pickle.load(file)
+# Load ML model and Scaler
+with open('./data/model.pickle','wb') as file:
+    pickle.dump(model, file)
 
 # Define property
 class Property:
@@ -18,21 +18,21 @@ class Property:
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'{self.rooms}, {self.bedrooms}, {self.bathrooms},'
-                f' {self.surface_total}, {self.surface_covered})')
+                f'{self.rooms}, {self.bedrooms}, {self.bathrooms}, '
+                f'{self.surface_total}, {self.surface_covered})')
 
     def predictValue(self, printable = False):
         '''
         Returns an estimate price in dollars for the property
-        :param printable: Bool - Default: False
+        :param printable: Bool - Default: False. Prints a message with the estimated value
         :return: float
         '''
         # Create an array with the object attributes
         property_values = [att for att in self.__dict__.values()]
         property_values = np.array(property_values).reshape(1, -1)
-        # Feed the array to our model
-        price_pred = model.predict(property_values)
+        property_values = model["scaler"].transform(property_values)
+        price_pred = model["modelo"].predict(property_values)[0]
         if printable:
-            print('Esta propiedad tiene un valor estimado de: {price_pred:.0f}')
+            print(f'Esta propiedad tiene un valor estimado de: {price_pred:.0f}')
         else:
             return price_pred
