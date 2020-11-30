@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 
 # Load ML model and Scaler
-with open('./data/model.pickle', 'rb') as file:
+with open('tmp/model.pickle', 'rb') as file:
     model = pickle.load(file)
 
 
