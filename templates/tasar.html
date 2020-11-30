@@ -7,24 +7,28 @@ h1   {text-align: left;}
     {% extends "layout.html" %}
     {% block title %}
     <h1>
-        <strong>Bienvenido a Tasador!</strong>
+        <strong>Tasa tu propiedad</strong>
     </h1>
     {% endblock title %}
 
     {% block content %}
-    <br>
-        <p> Tasador es .... </p>
-        <p> Podes usar tasador para ...</p>
-    </br>
-        <div>
-            <form style="display: inline">
-                <button formaction="/tasador" style="display:inline-block;p margin-left:20px">
-                    <p style="text-align: center; vertical-align: middle; margin: auto; font-size:20px ">
-                         Tasa tu propiedad!
-                    </p>
-                </button>
-            </form>
+    <form method="POST">
+        <div class="row justify-content-left">
+            <div class="col-2">
+                <label for="rooms">Ambientes:</label>
+                <input type="text" id="rooms" name="rooms" value=0><br><br>
+                <label for="bedrooms">Dormitorios:</label>
+                <input type="text" id="bedrooms" name="bedrooms" value=0><br><br>
+                <label for="bathrooms">Baños:</label>
+                <input type="text" id="bathrooms" name="bathrooms" value=0><br><br>
+                <label for="sup_total">Superficie Total (m2):</label>
+                <input type="text" id="sup_total" name="sup_total" value=0><br><br>
+                <label for="sup_cub">Sup. Cubierta (m2):</label>
+                <input type="text" id="sup_cub" name="sup_cub" value=0><br><br>
+            </div>
         </div>
+        <input type="submit" value="Tasar">
+    </form>
     {% endblock content %}
 </body>
 </html>

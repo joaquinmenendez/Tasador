@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title -->
+    <title>Tasador</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Personal CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='app.css') }}">
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <header class="site-header">
+         <nav class="navbar navbar-expand-sm navbar-dark bg-steel fixed-top">
+             <!--  Palabra/logo -->
+             <a class="navbar-brand" href="/">Tasador</a>
+             <!--  Opciones a la derecha de la palabra/logo -->
+             <div class="collapse navbar-collapse" id="navbarToggle">
+                <!--  mr-auto llena para la derecha hasta un nuevo item -->
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="/tasar">Tasar una propiedad</a>
+                    <!-- Aca podria poner otro link como el de arriba y asi -->
+                </div>
+                <!-- Navbar Right Side -->
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="/about">About</a>
+                </div>
+             </div>
+        </nav>
+    </header>
+
+</div>
+          {% block title %}{% endblock title %}
+          {% block content %}{% endblock content %}
+</div>
+</body>
+</html>

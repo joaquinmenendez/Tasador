@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tasador</title>
-</head>
+<style>
+h1   {text-align: center;}
+</style>
 <body>
     {% extends "layout.html" %}
     {% block title %}
-    <h2>
-        <strong>Bienvenido a Tasador!</a></strong>
-    </h2>
+    <h1>
+        <strong>Acerca de Nosotros</a></strong>
+    </h1>
     {% endblock title %}
 
     {% block content %}
-    <br>
-        <p> Tasador es .... </p>
-        <p> Podes usar tasador para ...</p>
-    </br>
-        <div>
-            <form style="display: inline">
-                <button formaction="/tasador" style="display:inline-block;p margin-left:20px">
-                    <p style="text-align: center; vertical-align: middle; margin: auto; font-size:20px ">
-                         Tasa tu propiedad!
-                    </p>
-                </button>
-            </form>
-        </div>
+    <div style="display:flex">
+    <div style="flex:1">
+              <img src="https://raw.githubusercontent.com/joaquinmenendez/Authenticator/master/videos_photos/joaquin.png?token=AEN4ZVS44ZYAIGTFWDTAY5S6W5KS6" alt="" width="300" style = "margin-bottom: 1em";/>
+              <br>
+              <h2 style="font-family:Helvetica, Arial, sans-serif; font-size: 2em">
+                 <a>Joaquin Menendez </a>
+              </h2>
+              <a href="https://www.linkedin.com/in/joaquin-menendez">
+              <img src="https://raw.githubusercontent.com/joaquinmenendez/Authenticator/master/videos_photos/linkedinlogo.png?token=AEN4ZVQWM3ZVOL4D3JRFDBK6WYZGK" alt="" width="40" height="40";/>
+              <a href="https://github.com/joaquinmenendez/";>
+              <img src="https://raw.githubusercontent.com/joaquinmenendez/Authenticator/master/videos_photos/github-square.png?token=AEN4ZVU4JINEOKQLAE2LZYS6WYZNU" alt="" width="40" height="40"/>
+              </a>
+
+    </div>
     {% endblock content %}
 </body>
 </html>
