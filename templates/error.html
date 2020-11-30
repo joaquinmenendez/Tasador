@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+ {% extends "layout.html" %}
+    {% block title %}
+    <h1>
+        <strong>Prediccion estimada</strong>
+    </h1>
+    {% endblock title %}
+
+{% block content %}
+    <br>
+     <p>Tu propiedad de: </p>
+     <p>- {{ prediction[0] }} Ambientes </p>
+     <p>- {{ prediction[1] }} Dormitorios </p>
+     <p>- {{ prediction[2] }} Baños </p>
+     <p>- {{ prediction[3] }} m2 de Superficie total </p>
+     <p>- {{ prediction[4] }}  m2 de Superficie cubierta </p>
+ <p>Tiene un valor estimado de US$ <strong>{{ prediction[5] }} </strong></p>
+    </br>
+{% endblock content %}
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+h1   {text-align: left;}
+</style>
+<body>
+    {% extends "layout.html" %}
+    {% block title %}
+    <h1>
+        <strong>Bienvenido a Tasador!</strong>
+    </h1>
+    {% endblock title %}
+
+    {% block content %}
+    <br>
+        <p> Tasador es .... </p>
+        <p> Podes usar tasador para ...</p>
+    </br>
+        <div>
+            <form style="display: inline">
+                <button formaction="/tasador" style="display:inline-block;p margin-left:20px">
+                    <p style="text-align: center; vertical-align: middle; margin: auto; font-size:20px ">
+                         Tasa tu propiedad!
+                    </p>
+                </button>
+            </form>
+        </div>
+    {% endblock content %}
+</body>
+</html>
