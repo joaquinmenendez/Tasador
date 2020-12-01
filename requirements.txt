@@ -1,3 +1,4 @@
 flask==1.1.1
 scikit-learn
-werkzeug
+Werkzeug==1.0.1
+gunicorn==20.0.4
