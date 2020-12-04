@@ -1,5 +1,4 @@
-from flask import Flask, render_template, url_for, request, flash, redirect
-import os
+from flask import Flask, render_template, request
 from tasador_app import Property
 
 #Initialize variables
