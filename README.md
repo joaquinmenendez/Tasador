@@ -13,3 +13,5 @@ pip install -r requirements.txt
 ```bash
 python3 app.py
 ```
+
+Para acceder a la Flask app montada en Heroku -> [click aqui](http://tasador.herokuapp.com/)
