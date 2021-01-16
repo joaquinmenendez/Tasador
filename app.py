@@ -12,6 +12,11 @@ def prediccion(propiedad):
             propiedad.bathrooms,
             propiedad.surface_total,
             propiedad.surface_covered,
+            propiedad.lat,
+            propiedad.lon,
+            propiedad.Departamento,
+            propiedad.Casa,
+            propiedad.PH,
             round(propiedad.predictValue())
             ]
 
@@ -35,7 +40,12 @@ def tasar_prop():
         bathrooms = int(request.form['bathrooms'])
         surface_total = int(request.form['sup_total'])
         surface_covered = int(request.form['sup_cub'])
-        propiedad = Property(rooms, bedrooms, bathrooms, surface_total, surface_covered)
+        lat = float(request.form['lat'])
+        lon = float(request.form['lon'])
+        Departamento = int(request.form['Departamento'])
+        Casa = int(request.form['Casa'])
+        PH = int(request.form['PH'])
+        propiedad = Property(rooms, bedrooms, bathrooms, surface_total, surface_covered, lat, lon, Departamento, Casa, PH)
     except Exception as e:
         print(e)
         return render_template('/error.html')  # No queria lidiar con errores ni nada fancy

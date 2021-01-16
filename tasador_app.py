@@ -9,17 +9,26 @@ with open('tmp/model.pickle', 'rb') as file:
 # Define property
 class Property:
 
-    def __init__(self,rooms, bedrooms, bathrooms, surface_total, surface_covered):
+    def __init__(self,rooms, bedrooms, bathrooms, surface_total, surface_covered, lat, lon, Departamento = 0, Casa = 0, PH = 0):
         self.rooms = rooms
         self.bedrooms = bedrooms
         self.bathrooms = bathrooms
         self.surface_total = surface_total
         self.surface_covered = surface_covered
+        self.lat = lat
+        self.lon = lon
+        self.Departamento = Departamento
+        self.Casa = Casa
+        self.PH = PH
+
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'{self.rooms}, {self.bedrooms}, {self.bathrooms}, '
-                f'{self.surface_total}, {self.surface_covered})')
+                f'{self.rooms}, {self.bedrooms}, {self.bathrooms},'
+                f'{self.surface_total}, {self.surface_covered},'
+                f'{self.lat}, {self.lon},'
+                f'{self.Departamento}, {self.Casa}, {self.PH})')
+
 
     def predictValue(self, printable=False):
         """
