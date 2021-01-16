@@ -1,4 +1,4 @@
-# DEMO
+# Demo - PyDay Chile 2020
 
 Para correr la Flask app:
 
